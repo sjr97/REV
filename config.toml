@@ -1,13 +1,17 @@
-logging-to-file = true        # enables logging of every patch process to a seperate file
-enable-magisk-update = false   # set this to false if you do not want to receive updates for the module in magisk app
+logging-to-file = true
+enable-magisk-update = false
 
-# add 'enabled = false' for not patching a specific app or remove it from the config
-# see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
-
-# you can use rvmm-config-gen to generate a config
-
-[YouTube]
+[YT]
 build-mode = "apk"
 excluded-patches = "'Return YouTube Dislike' 'Swipe controls' 'Enable debugging' 'Announcements'"
+version = "auto"
+apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
+
+[YT-EX]
+patches-source = "inotia00/revanced-patches"
+integrations-source = "inotia00/revanced-integrations"
+cli-source = "inotia00/revanced-cli"
+build-mode = "apk"
+excluded-patches = "'Custom branding icon YouTube' 'Custom branding name YouTube' 'Return YouTube Dislike' 'Swipe controls'"
 version = "auto"
 apkmirror-dlurl = "https://apkmirror.com/apk/google-inc/youtube/"
